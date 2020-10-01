@@ -1,0 +1,15 @@
+abcdefghijklmnopqrstuvwxyz
+012345678911111111112222222
+          01234567890123456
+
+"secret" length->6
+ 042561
+terpakai 04251
+belumterpakai 3
+replace angka 6 (length password) dengan yg belum terpakai
+hasil permutasi vector 042531
+
+rajin pangkal pandai
+042531042531042531042531
+------++++++------++++++
+r jnaipankagldpn aa   i 
