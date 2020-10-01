@@ -1,0 +1,56 @@
+Daniel Suranta Sitepu
+18/424185/PA/18290
+
+Penjelasan:
+Program ini berfungsi untuk meng-enkripsi suatu plain text dengan 2 metode
+Metode pertama adalah Vigenere (Substitusi), hasilnya masuk ke metode rectangle (Transposisi)
+Dengan penggabungan 2 metode klasik ini, hasil yang diharapkan bisa semakin random dan aman
+
+Input:
+- Plain Text (String yang akan di enkripsi)
+- Password
+- Jumlah kolom
+
+1) Metode Vigenere (Substitusi)
+Metode yang merupakan metode cipher klasik ini merupakan penyempurnaan metode Caesar
+Metode Vigenere dan Caesar sama-sama menggunakan teknik shift karakter
+Keduanya menerima 2 input, yaitu plain text dan key (password pada Vigenere)
+
+Perbedaannya, shifting pada metode Caesar menggunakan angka yang tetap sebagai key
+Misalnya key = 5, maka semua huruf plain text akan di shift sebanyak 5 kali
+Apabila ada huruf 'a' selalu menjadi 'f', 'b' menjadi 'g', dst
+Metode Caesar menjadi mudah ditebak karena karakter bergeser dengan jumlah yang tetap
+
+Sedangkan, shifting pada metode Vigenere menggunakan sebuah teks password yang akan dikonversi menjadi key
+Password akan berulang sebagai key apabila plain text lebih panjang dari password
+Misalnya plain text 'aaaaaa', dan passwordnya 'bbc'
+Plain text = a a a a a a a (0 0 0 0 0 0 0)
+Password   = b b c b b c b (1 1 2 1 1 2 1)
+------------------------------------------ + (%26)
+Enkripsi   = b b c b b c b (1 1 2 1 1 2 1)
+
+Contoh lain, plain text 'kriptografi', passwordnya 'kkj' 
+Plain text = k r i p t o g r a f i
+Password   = k k j k k j k k j k k
+----------------------------------- +
+Enkripsi   = u a r z c x q a j p s
+
+Dekripsinya sendiri dilakukan dengan cara shifting plain text dengan password kekiri (-)
+Dengan cara ini, metode Vigenere menjadi lebih random dan lebih aman
+Karena memiliki password sebagai key
+
+2) Metode Rectangle (Transposisi)
+Metode ini juga merupakan metode cipher klasik, tetapi dengan cara membentuk string
+menjadi bentuk tabel dengan baris dan kolom tertentu, yang berisi character
+Metode ini menerima input berupa plain text dan jumlah kolom
+Contoh lain, plain text 'kriptografi', jumlah kolom 3 
+Tabel:
+  1 2 3
+1 k r i
+2 p t o
+3 g r a
+4 f i  
+Hasil cipher: kpgfrtriioa 
+
+Dekripsi dari metode ini dengan membentuk cipher menjadi tabel lagi
+dengan urutan baris dahulu (kebawah) baru kolom (kekanan)
