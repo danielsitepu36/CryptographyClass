@@ -51,5 +51,5 @@ cols = int(cols)
 
 cipher = encrypt(plain, cols)
 plains = decrypt(cipher, cols)
-print("Ciper: " + cipher)
+print("Cipher: " + cipher)
 print("Plain: " + plains)

@@ -79,20 +79,20 @@ def decryptRect(cipher, column):
     return plain
 
 
-plain = input("Masukkan teks: ")
+plain = input("Enter plain text: ")
 password = input("Password: ")
-cols = input("Kolom: ")
+cols = input("Column: ")
 
 cols = int(cols)
 
 print()
 cipherRect = encryptRect(plain, cols)
-print("Hasil enkripsi Rectangle: ", cipherRect)
+print("Rectangle encryption: ", cipherRect)
 cipherVigenere = encryptVigenere(cipherRect, password)
-print("Hasil enkripsi Vigenere: ", cipherVigenere)
+print("Vigenere encryption: ", cipherVigenere)
 
 print()
 plainVigenere = decryptVigenere(cipherVigenere, password)
-print("Hasil dekripsi Vigenere: ", plainVigenere)
+print("Vigenere decryption: ", plainVigenere)
 plainRect = decryptRect(plainVigenere, cols)
-print("Hasil dekripsi Rectangle: ", plainRect)
+print("Rectangle decryption: ", plainRect)

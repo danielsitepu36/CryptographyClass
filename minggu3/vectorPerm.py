@@ -74,7 +74,7 @@ def decrypt(cipher, password):
     return plain
 
 
-plain = input("Masukkan teks: ")
+plain = input("Plain text: ")
 password = input("Password: ")
 print(permVector(password))
 

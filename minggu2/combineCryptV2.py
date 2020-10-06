@@ -83,35 +83,14 @@ while(True):
 
 cols = int(cols)
 
-# cipherVigenere = encryptVigenereV2(plain, password)
-# print("Hasil enkripsi Vigenere: ", cipherVigenere)
-
-# plainVigenere = decryptVigenereV2(cipherVigenere, password)
-# print("Hasil dekripsi Vigenere: ", plainVigenere)
-
-# print()
-# cipherRect = encryptRect(plain, cols)
-# print("Hasil enkripsi Rectangle: ", cipherRect)
-# cipherVigenere = encryptVigenereV2(cipherRect, password)
-# print("Hasil enkripsi Vigenere: ", cipherVigenere)
-
-# print("\nHASIL ENKRIPSI FINAL=", cipherVigenere, '\n')
-
-# plainVigenere = decryptVigenereV2(cipherVigenere, password)
-# print("Hasil dekripsi Vigenere: ", plainVigenere)
-# plainRect = decryptRect(plainVigenere, cols)
-# print("Hasil dekripsi Rectangle: ", plainRect)
-
-# print("\nHASIL DEKRIPSI FINAL=", plainRect)
-
 print()
 cipherVigenere = encryptVigenereV2(plain, password)
-print("Hasil enkripsi Vigenere: ", cipherVigenere)
+print("Vigenere encryption: ", cipherVigenere)
 cipherRect = encryptRect(cipherVigenere, cols)
-print("Hasil enkripsi Rectangle: ", cipherRect)
+print("Rectangle encryption: ", cipherRect)
 
 print()
 plainRect = decryptRect(cipherRect, cols)
-print("Hasil dekripsi Rectangle: ", plainRect)
+print("Rectangle decryption: ", plainRect)
 plainVigenere = decryptVigenereV2(plainRect, password)
-print("Hasil dekripsi Vigenere: ", plainVigenere)
+print("Vigenere decryption: ", plainVigenere)

@@ -37,11 +37,3 @@ plain = decrypt(cipher, password)
 
 print("Cypher: " + cipher)
 print("Plain: " + plain)
-
-# Gimana kok gabisa
-# Bisa join audio ga
-
-# apane?
-
-# Bisa join audio ga
-# Check di live share
