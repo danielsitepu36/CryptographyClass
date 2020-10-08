@@ -9,8 +9,6 @@ numLetters = len(letters)
 for i in range(numLetters):
     invLetters[letters[i]] = i
 
-# print(invLetters['f'])
-
 
 def encrypt(plain, shift):
     global letters, invLetters, numLetters
@@ -39,10 +37,3 @@ cipher = encrypt(plain, shift)
 plain = decrypt(cipher, shift)
 print("Cipher: " + cipher)
 print("Plain: " + plain + '\n')
-
-print(decrypt("lepsdweberkoy", 4))
-
-# LOLSSSS
-# klean bisa run di terminal
-# tinggal pencet panah atas, enter
-# jgn lupa di save dulu
