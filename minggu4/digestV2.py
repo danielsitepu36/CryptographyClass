@@ -4,7 +4,9 @@ import random
 def hash(plain):
     cols = 4
     # Kodomain yang digunakan berupa huruf w/x/y/z (119-122)
-    startChar = 119
+    char = ["0", "1", "2", "3", "4", "5", "6", "7",
+            "8", "9", "a", "b", "c", "d", "e", "f"]
+    startChar = 97
     codomain = [0]*cols
     result = ''
 
@@ -30,7 +32,7 @@ def hash(plain):
     # Setiap kolom dijadikan char dengan nilai w/x/y/z sesuai hasil xor % 4
     # Ditambah startChar
     for i in range(cols):
-        result += chr(startChar+(codomain[i] % cols))
+        result += chr(startChar + (codomain[i] % cols))
 
     return result
 
