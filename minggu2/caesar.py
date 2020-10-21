@@ -1,7 +1,5 @@
 letters = "abcdefghijklmnopqrstuvwxyz "
 
-print(letters[5], letters[20], letters[2], letters[10])
-
 invLetters = {}
 
 numLetters = len(letters)

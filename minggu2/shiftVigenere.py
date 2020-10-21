@@ -35,5 +35,5 @@ password = input("Password: ")
 cipher = encrypt(plain, password)
 plain = decrypt(cipher, password)
 
-print("Cypher: " + cipher)
+print("Cipher: " + cipher)
 print("Plain: " + plain)

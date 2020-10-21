@@ -35,11 +35,15 @@ def encrypt(plain, password):
     if len(plain) > (parts * partLength):
         parts += 1
 
+    x = 0
     plainIndex = 0
     for i in range(parts):
         partCipher = [" "]*partLength
         for j in range(partLength):
             partCipher[perm[j]] = plain[plainIndex]
+            x = letters.index(password[j])
+            print(password[j], "(", x, ") % len(password) (", len(
+                password), ") = ", x % len(password))
             plainIndex += 1
             if plainIndex == len(plain):
                 break
@@ -76,9 +80,9 @@ def decrypt(cipher, password):
 
 plain = input("Plain text: ")
 password = input("Password: ")
-print(permVector(password))
+# print(permVector(password))
 
 cipher = encrypt(plain, password)
-print("\nCipher: ", cipher)
+print("Cipher:", cipher)
 plains = decrypt(cipher, password)
-print("Plain: ", plains)
+print("Plain:", plains)
